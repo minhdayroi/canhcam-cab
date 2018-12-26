@@ -1,0 +1,18 @@
+{
+	"SETUP": {
+		"index": {
+			"header": [
+				"header/h-14"
+			],
+			"body": [
+				"breadcrumb/b-5",
+				"nav/n-9",
+				"carousel/c-9"
+			],
+			"footer": [
+				"footer/f-11",
+				"footer/f-13"
+			]
+		}
+	}
+}

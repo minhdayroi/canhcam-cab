@@ -1,0 +1,117 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-carousel-5
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.menucol
+		display: flex
+		flex-direction: column
+		align-items: center 
+		margin-bottom: 2rem
+		h3 
+			background: darken(color-get($mau,trang),7%)
+			border: 1px solid darken(color-get($mau,trang),10%)
+			margin-bottom: 0
+			justify-content: center
+			align-items: center
+			display: flex
+			white-space: nowrap
+			+pad(1rem 2rem)
+			+fw(600)
+			text-transform: uppercase
+		+media-breakpoint-up(lg)
+			flex-direction: row
+			margin-bottom: 0
+			h3 
+				position: relative
+				&:after
+					z-index: 10
+					left: 100%
+					top: 50%
+					border: solid transparent
+					content: " "
+					height: 0
+					width: 0
+					position: absolute
+					pointer-events: none
+
+				&:after
+					border-color: transparent
+					border-left-color: darken(color-get($mau,trang),10%)
+					border-width: .75rem
+					margin-top: -.75rem
+
+			
+	.list-items
+		overflow: hidden
+		&.owl-carousel
+			// Main
+			.owl-stage-outer
+				border: 1px solid darken(color-get($mau,trang),10%)
+				.item 
+					border-right: 1px solid darken(color-get($mau,trang),10%)
+					+pad(1rem)
+					img 
+						+bor-rad(5px)
+						filter: grayscale(100%)
+					&:hover
+						img 
+							filter: grayscale(0%)
+
+					p
+						margin-top: .5rem 
+						text-align: center
+						+fz(.85rem)
+			// Nav
+			.owl-nav
+				button
+					&.owl-prev, &.owl-next
+						+pad(.5rem_)
+						width: 3rem
+						height: 3rem
+						background: darken(color-get($mau,trang),10%)
+						+bor-rad(0)
+						text-align: center
+						&:focus
+							outline: none
+					&:hover, &.active
+						&.owl-prev, &.owl-next
+							background: color-get($mau,main)
+				+media-breakpoint-up(lg)
+					margin-top: 0
+					button
+						&.owl-prev, &.owl-next
+							width: 2.5rem
+							height: 2.5rem
+							+pad(0rem_)
+							display: none
+							margin: 0
+							+transform(translateY(-50%))
+							&:focus
+								outline: none
+						&.owl-prev
+							+pos(abs, 50% null null 0)
+						&.owl-next
+							+pos(abs, 50% 0 null null)
+			// Dots
+			.owl-dots
+				.owl-dot
+					&:focus
+						outline: none
+					span
+						background: darken(color-get($mau,trang),5%)
+					&.active
+						span
+							background: color-get($mau,main)
+
+		&:hover
+					
+			+media-breakpoint-up(lg)
+				.owl-carousel
+					.owl-nav
+						button
+							display: block

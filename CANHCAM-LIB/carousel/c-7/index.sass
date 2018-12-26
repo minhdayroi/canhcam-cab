@@ -1,0 +1,111 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-carousel-7
+	.news-list
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		align-items: center 
+		margin-bottom: 2rem
+		+media-breakpoint-up(lg)
+			flex-direction: row
+			margin-bottom: 0
+		.name
+			+pad(2rem 0)
+			background: darken(color-get($mau,main),0%)
+			min-width: 250px
+			h2 
+				margin-bottom: 0
+				color: darken(color-get($mau,trang),0%)
+				+fz(1.5rem)
+				text-transform: uppercase
+			+media-breakpoint-up(lg)
+				display: flex
+				align-items: flex-end
+				+pad(3rem 0)
+				flex: 0 0 25%
+				max-width: 25%
+				h2 
+					+pad(0 2rem)
+					font-size: 2rem
+					span 
+						display: block
+	.owl-carousel
+		position: relative
+		// Main
+		.owl-stage-outer
+		// Nav
+		.owl-nav
+			text-align: center
+			margin-top: 1rem 
+			button
+				&.owl-prev, &.owl-next
+					+mar(.5rem)
+					+pad(.5rem_)
+					width: 3rem
+					height: 3rem
+					background: darken(color-get($mau,trang),5%)
+					+bor-rad(0%)
+					text-align: center
+					&:focus
+						outline: none
+				&:hover, &.active
+					&.owl-prev, &.owl-next
+						background: color-get($mau,main)
+						color: color-get($mau,trang)
+				&.disabled
+					+opacity(.5)
+		// Dots
+		.owl-dots
+			.owl-dot
+				&:focus
+					outline: none
+				span
+					background: darken(color-get($mau,trang),5%)
+				&.active
+					span
+						background: color-get($mau,main)
+	.news-list
+		+media-breakpoint-up(lg)
+			border-top: 2px  solid color-get($mau,trang)
+			border-bottom: 2px  solid color-get($mau,trang)
+		.item
+			display: flex
+			text-decoration: none
+			height: 100%
+			overflow: hidden
+			color: color-get($mau,trang)
+			+media-breakpoint-up(lg)
+				border-left: 2px solid color-get($mau,trang)
+			figure
+				position: relative
+				overflow: hidden
+				width: 100%
+				margin-bottom: 0
+				figcaption
+					+pos(abs, null null 3rem 0)
+					display: flex
+					h3
+						+fz(1.1rem)
+						+fw(400)
+						+pad(1rem 3rem)
+						background: darken(color-get($mau,main),0%)
+						margin-bottom: 0
+						text-transform: uppercase
+						line-height: 1.5
+					i 
+						+pad(1rem 1.2rem)
+						margin-left: 2px 
+						background: darken(color-get($mau,main),0%)
+						
+			&:hover
+				color: color-get($mau,trang)
+				figure
+					img
+						+opacity(.7)
+					figcaption 
+						h3, i 
+							background: darken(color-get($mau,main),20%)

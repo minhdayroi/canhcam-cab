@@ -1,0 +1,56 @@
+@import ../../_includes
+
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-header-10
+	background: color-get($mau,main)
+	&.fixedheader
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 999
+		transition: all .25s ease-in-out
+		&.active , &.expand
+			box-shadow: 0 0 5px rgba(0,0,0,.5)
+	.k-menu-bar
+		color: color-get($mau,trang)
+		.k-button-toggle
+			color: color-get($mau,trang)
+		.navbar-brand
+			img
+				max-height: 2rem
+		.nav
+			.nav-item
+				.nav-link
+					color: color-get($mau,trang)
+	.k-responsive-menu
+		background: color-get($mau,main) !important
+		.navbar-brand
+			color: color-get($mau,trang)
+			img
+				max-height: 2rem
+		.nav
+			.nav-item
+				.nav-link
+					color: lighten(color-get($mau,main),30%)
+				&:hover, &.active, &.show
+					.nav-link
+						color: color-get($mau,trang)
+
+	// CHANGE MENU
+
+	+media-breakpoint-up(md)
+		.k-responsive-menu
+			.nav
+				.nav-item
+					+ .nav-item
+						margin-left: .25rem
+					&:hover, &.active, &.show
+						+box-sha(0 0 0 1px color-get($mau,trang), inset)
+
+	+media-breakpoint-up(lg)
+
+	+media-breakpoint-up(xl)
